@@ -1,0 +1,24 @@
+<td-layout #layout>
+  <td-navigation-drawer color="warn" flex sidenavTitle="Shuffledex">
+    <md-nav-list>
+      <a md-list-item (click)="layout.close()" routerLink="/dashboard">Dashboard</a>
+      <a md-list-item (click)="layout.close()" routerLink="/pokemons">Pokemons</a>
+      <pokemon-search (emitterHBC)="layout.close()"></pokemon-search>
+    </md-nav-list>
+  </td-navigation-drawer>
+  <td-layout-nav color="warn">
+    <router-outlet></router-outlet>
+  </td-layout-nav>
+</td-layout>
+
+<!-->original<>
+<button md-button [mdMenuTriggerFor]="menu" style="font-size:25px">{{title}} Menu</button>
+<md-menu #menu="mdMenu">
+  <button md-menu-item routerLink="/dashboard">Dashboard</button>
+  <button md-menu-item routerLink="/pokemons">Pokemons</button>
+</md-menu>
+<!>original<>
+
+
+
+<router-outlet></router-outlet-->

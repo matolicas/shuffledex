@@ -1,0 +1,44 @@
+<div layout="horizontal" style="flex-wrap:wrap">
+    <a *ngFor="let pokemon of pokemons" [routerLink]="['/detail', pokemon.id]">
+        <md-card style="width:13em">
+            <md-card-header>
+                <div md-card-avatar>
+                    <img [src]="getPokemonImageUrl(pokemon.id)" style="height:50px; width:50px;">
+                </div>
+                <md-card-title>
+                    {{pokemon.name}}
+                </md-card-title>
+                <md-card-subtitle>
+                    {{pokemon.type}}
+                </md-card-subtitle>
+            </md-card-header>
+            <img md-card-image src="">
+            <md-card-content>
+                <div>
+                    <label>
+                        Pokedex Number:
+                        {{pokemon.id}}
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Base XP:
+                        {{pokemon.baseXP}}
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Height:
+                        {{pokemon.height}}
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Weight:
+                        {{pokemon.weight}}
+                    </label>
+                </div>
+            </md-card-content>
+        </md-card>
+    </a>
+</div>

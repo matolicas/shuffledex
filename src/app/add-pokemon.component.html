@@ -1,0 +1,43 @@
+<md-card style="width:13em">
+  <div><button md-icon-button (click)="goBack()">←</button></div>
+  <md-card-header>
+    <md-card-title>
+      Adding Pokemon
+    </md-card-title>
+  </md-card-header>
+  <md-card-content>
+    <div>
+      <md-input-container>
+        <input mdInput [(ngModel)]="pokemon.id" placeholder="Pokedex Number" />
+      </md-input-container>
+    </div>
+    <div>
+      <md-input-container>
+        <input mdInput [(ngModel)]="pokemon.name" placeholder="Name" />
+      </md-input-container>
+    </div>
+    <div>
+      <md-select [(ngModel)]="pokemon.type" placeholder="Type">
+        <md-option *ngFor="let type of types" [value]="type">
+          {{type}}
+        </md-option>
+      </md-select>
+    </div>
+    <div>
+      <md-input-container>
+        <input mdInput [(ngModel)]="pokemon.baseXP" placeholder="Base XP" />
+      </md-input-container>
+    </div>
+    <div>
+      <md-input-container>
+        <input mdInput [(ngModel)]="pokemon.height" placeholder="Height" />
+      </md-input-container>
+      <md-input-container>
+        <input mdInput [(ngModel)]="pokemon.weight" placeholder="Weight" />
+      </md-input-container>
+    </div>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button (click)="add()">Add</button>
+  </md-card-actions>
+</md-card>

@@ -1,0 +1,15 @@
+<md-chip-list>
+  <md-chip *ngFor="let pokemon of pokemons" class="pokemons" [class.selected]="pokemon === selectedPokemon" (click)="onSelect(pokemon)">
+    {{pokemon.name}}
+  </md-chip>
+  <md-chip class="addChip" (click)="gotoAddPokemon()">
+    +
+  </md-chip>
+</md-chip-list>
+<div *ngIf="selectedPokemon">
+  <h2>
+    {{selectedPokemon.name}} is {{selectedPokemon.type}} type
+  </h2>
+  <button md-button (click)="gotoDetail()">View Details</button>
+  <button md-button (click)="delete(selectedPokemon); $event.stopPropagation()">Delete</button>
+</div>
