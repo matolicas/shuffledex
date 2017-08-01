@@ -53,10 +53,8 @@ export class PokemonSearchComponent implements OnInit {
       });
   }
 
-  //depois trocar de pokemon: Pokemon para id: number e fazer funcionar :)
-
-  gotoDetail(id: number): void {
-    let link = ['/detail', id];
+  gotoDetail(pokemon: Pokemon): void {
+    let link = ['/detail', pokemon.id];
     this.router.navigate(link);
     this.search(null);
     this.emitHBC();

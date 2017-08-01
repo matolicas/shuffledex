@@ -11,8 +11,8 @@ export class PokemonSearchService {
     constructor(private http: Http) { }
     search(term: string): Observable<Pokemon[]> {
         return this.http
-            .get(`http://localhost:8080/api/pokemon/namehas/${term}`)
-            //.get(`api/pokemons/?name=${term}`)
+            //.get(`http://localhost:8080/api/pokemon/namehas/${term}`)
+            .get(`api/pokemons/?name=${term}`)
             .map(response => response.json());
     }
 }

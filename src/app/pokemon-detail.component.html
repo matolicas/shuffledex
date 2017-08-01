@@ -13,19 +13,39 @@
   </md-card-header>
   <md-card-content>
     <div>
-      <label> Pokedex Number: {{pokemon.id}} </label>
+      <md-input-container>
+        <input mdInput [(ngModel)]="pokemon.id" placeholder="Pokedex Number" />
+      </md-input-container>
     </div>
     <div>
-      <label> Base XP: {{pokemon.baseXP}} </label>
+      <md-input-container>
+        <input mdInput [(ngModel)]="pokemon.name" placeholder="Name" />
+      </md-input-container>
     </div>
     <div>
-      <label> Height: {{pokemon.height}} </label>
+      <md-select [(ngModel)]="pokemon.type" placeholder="Type">
+        <md-option *ngFor="let type of types" [value]="type">
+          {{type}}
+        </md-option>
+      </md-select>
     </div>
     <div>
-      <label> Weight: {{pokemon.weight}} </label>
+      <md-input-container>
+        <input mdInput [(ngModel)]="pokemon.baseXP" placeholder="Base XP" />
+      </md-input-container>
+    </div>
+    <div>
+      <md-input-container>
+        <input mdInput [(ngModel)]="pokemon.height" placeholder="Height" />
+      </md-input-container>
+    </div>
+    <div>
+      <md-input-container>
+        <input mdInput [(ngModel)]="pokemon.weight" placeholder="Weight" />
+      </md-input-container>
     </div>
   </md-card-content>
   <md-card-actions>
-    <button md-button (click)="delete()">Delete</button>
+    <button md-button (click)="save()">Save</button>
   </md-card-actions>
 </md-card>

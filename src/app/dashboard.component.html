@@ -1,5 +1,5 @@
 <div layout="horizontal" style="flex-wrap:wrap">
-    <a *ngFor="let pokemon of pokemons" [routerLink]="['/detail', pokemon.id]">
+    <a *ngFor="let pokemon of displayingPokemons" [routerLink]="['/detail', pokemon.id]">
         <md-card style="width:13em">
             <md-card-header>
                 <div md-card-avatar>
@@ -40,5 +40,10 @@
                 </div>
             </md-card-content>
         </md-card>
+    </a>
+</div>
+<div style="float:right;">
+    <a *ngFor="let page of pages">
+        <button style="font-size: 12px;" md-button (click)="gotoPage(page)">{{page}}</button>
     </a>
 </div>

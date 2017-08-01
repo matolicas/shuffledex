@@ -39,7 +39,7 @@ export class AddPokemonComponent {
     this.location.back();
   }
   add(): void {
-    this.pokemonService.add(this.pokemon.name)
+    this.pokemonService.add(this.pokemon)
       .subscribe();
     this.goBack();
   }

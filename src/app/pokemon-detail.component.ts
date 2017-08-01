@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 import 'rxjs/add/operator/switchMap';
@@ -11,7 +11,27 @@ import { Pokemon } from './pokemon';
   templateUrl: `./pokemon-detail.component.html`
 })
 export class PokemonDetailComponent implements OnInit {
-  pokemon: Pokemon;
+  @Input() pokemon: Pokemon;
+  types: string[] = [
+    'Bug',
+    'Dark',
+    'Dragon',
+    'Electric',
+    'Fairy',
+    'Fighting',
+    'Fire',
+    'Flying',
+    'Ghost',
+    'Grass',
+    'Ground',
+    'Ice',
+    'Normal',
+    'Poison',
+    'Psychic',
+    'Rock',
+    'Steel',
+    'Water'
+  ];
   pokemonImageUrl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
   constructor(
     private pokemonService: PokemonService,
@@ -24,8 +44,8 @@ export class PokemonDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
-  delete(): void {
-    this.pokemonService.delete(this.pokemon.id)
+  save(): void {
+    this.pokemonService.update(this.pokemon)
       .subscribe(() => this.goBack());
   }
   getPokemonImageUrl(id: number): string{

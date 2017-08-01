@@ -14,8 +14,10 @@ import { UserModule } from './view/user/user.module';
 import { RouterModule } from '@angular/router';
 import { CovalentSearchModule } from '@covalent/core';
 
-//import { InMemoryWebApiModule } from 'in-memory-web-api-master';
-//import { InMemoryDataService }  from './in-memory-data.service';
+//
+import { InMemoryWebApiModule } from 'in-memory-web-api-master';
+//
+import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AddPokemonComponent } from './add-pokemon.component';
 import { PokemonDetailComponent } from './pokemon-detail.component';
@@ -44,7 +46,8 @@ import { DashboardComponent } from './dashboard.component';
     MngtModule.forRoot(),
     SysModule.forRoot(),
     UserModule.forRoot(),
-    //InMemoryWebApiModule.forRoot(InMemoryDataService),
+    //
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule
   ],
   providers: [PokemonService],
