@@ -9,7 +9,7 @@ backend o projeto H2/SpringBoot/REST faça:
   3) No PokemonSearchService descomente as linhas 14 e 16 e comente 15 e 17.
   
   
-Este projeto angular foi feito juntamente com o shuffledrz-rest, ambos com base em:
+Este projeto angular foi feito juntamente com o shuffledex-rest, ambos com base em:
   
 1) Material principal: Spring Boot REST + Angular 2 + JPA + Hibernate +
 MySQL CRUD Example
