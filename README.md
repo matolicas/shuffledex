@@ -13,17 +13,14 @@ Este projeto angular foi feito juntamente com o shuffledex-rest, ambos com base 
   
 1) Material principal: Spring Boot REST + Angular 2 + JPA + Hibernate +
 MySQL CRUD Example
-http://www.concretepage.com/spring-boot/spring-boot-rest-angular-2-jpa-
-hibernate-mysql-crud-example
+http://www.concretepage.com/spring-boot/spring-boot-rest-angular-2-jpa-hibernate-mysql-crud-example
 
 2) Sobre o uso da DB H2 para os testes locais: Integrate an H2 Database
 in Your Spring Boot App
-https://dzone.com/articles/integrate-h2-database-in-your-spring-boot-ap
-plicat
+https://dzone.com/articles/integrate-h2-database-in-your-spring-boot-applicat
 Material de apoio: How to configure spring-boot to use file based H2
 database
-https://stackoverflow.com/questions/37903105/how-to-configure-spring-bo
-ot-to-use-file-based-h2-database
+https://stackoverflow.com/questions/37903105/how-to-configure-spring-boot-to-use-file-based-h2-database
 
 3) Tutorial principal que eu segui para o desevolvimento da parte
 Angular4:Tutorial: Tour of Heroes
@@ -56,17 +53,14 @@ uma organização do ambiente mais próxima da já utilizada aqui na SDS...
 pelo menos da presente no projeto no qual estamos trabalhando agora, o
 BioPonto2.
 http://loiane.training/curso/angular-2/
-https://www.youtube.com/playlist?list=PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2
-G
+https://www.youtube.com/playlist?list=PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2G
 
 6) Sobre o Teradata, para a criação da interface, já usando as
 diretivas do Material Design, foram usados os components da biblioteca
 de components (https://material.angular.io/components) e para a criação
 do layout, foi utilizada como base a Full Demo das Nav Views
-(encontrada no final desta página: https://teradata.github.io/covalent/
-#/layouts/nav-view).
-Pode-se também usar como referência o Covalent Quickstart (https://gith
-ub.com/Teradata/covalent-quickstart).  
+(encontrada no final desta página: https://teradata.github.io/covalent/#/layouts/nav-view).
+Pode-se também usar como referência o Covalent Quickstart (https://github.com/Teradata/covalent-quickstart).  
 
 obs.: Para a compreensão geral do workflow foi tido como base o que já
 há commitado na SVN do projeto BioPonto2, tanto para o frontend, quanto
