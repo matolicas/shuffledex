@@ -16,7 +16,6 @@ import { CovalentSearchModule } from '@covalent/core';
 
 //
 import { InMemoryWebApiModule } from 'in-memory-web-api-master';
-//
 import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AddPokemonComponent } from './add-pokemon.component';

@@ -13,6 +13,7 @@ export class PokemonSearchService {
         return this.http
             //.get(`http://localhost:8080/api/pokemon/namehas/${term}`)
             .get(`api/pokemons/?name=${term}`)
-            .map(response => response.json());
+            //.map(response => response.json());
+            .map(response => response.json().data as Pokemon[]);
     }
 }
